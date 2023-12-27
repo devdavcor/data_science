@@ -1,0 +1,1 @@
+This folder contains some practicing from "Analytical Skills for AI & Data Science" book.
