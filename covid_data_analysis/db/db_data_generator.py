@@ -1,9 +1,11 @@
 import numpy as np
 import pandas as pd
 import os
+import time
 from db_data import *
 
 def data_generator(data, diretory_name):
+	start = time.time()
 	if not os.path.exists(diretory_name):
 		os.makedirs(diretory_name)
 		print(f"Carpeta '{diretory_name}' creada exitosamente en '{diretory_name}'.")
@@ -19,6 +21,8 @@ def data_generator(data, diretory_name):
 			save_column_data(array_aux, db_head)
 		except KeyError as e:
 			print(f"Error: La columna '{head}' no se encuentra en el DataFrame.")
+	end = time.time()
+	print(f"Tiempo de ejecución: {end - start}")
 	return
 
 
@@ -34,4 +38,4 @@ def save_column_data(array_column, column_name):
 	return
 
 
-data_generator(data, 'prueba_3')
+data_generator(data, 'prueba_5')

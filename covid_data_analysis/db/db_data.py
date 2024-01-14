@@ -11,3 +11,11 @@ headers = ['FECHA_ACTUALIZACION', 'ID_REGISTRO', 'ORIGEN', 'SECTOR', 'ENTIDAD_UM
            'HIPERTENSION', 'OTRA_COM', 'CARDIOVASCULAR', 'OBESIDAD', 'RENAL_CRONICA', 'TABAQUISMO', 'OTRO_CASO',
            'TOMA_MUESTRA_LAB', 'RESULTADO_LAB', 'TOMA_MUESTRA_ANTIGENO', 'RESULTADO_ANTIGENO', 'CLASIFICACION_FINAL',
            'MIGRANTE', 'PAIS_NACIONALIDAD', 'PAIS_ORIGEN', 'UCI']
+
+
+array_cargado = np.load('prueba_3/ASMA.npy')
+
+numero_elementos = len(array_cargado) * 40
+numero_formateado = "{:,}".format(numero_elementos)
+
+print(f"El número de elementos de ASMA es: {numero_formateado}")
